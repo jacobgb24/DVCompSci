@@ -3,14 +3,16 @@ public class AreaFinder //Copyright 2014 by Jacob and Trent
 {
 	public static void main (String [] args)
 	{
-		String exit = "yes";
+		String exit = "yes";	
 		do
 		{
+		try
+			{
 			System.out.println("\nTo find area of rectangle, press r.\nTo find area of triangle, press t.\nTo find area of circle, press c.");	
 			Scanner in = new Scanner (System.in);
 			String userinput = in.nextLine();
 			
-			if(userinput.equals("c"))	//Area of a circle
+			if(userinput.equalsIgnoreCase("c") || userinput.equalsIgnoreCase("circle"))	//Area of a circle
 			{
 				System.out.println("\nPlease type the radius.");
 				double radius;
@@ -19,7 +21,7 @@ public class AreaFinder //Copyright 2014 by Jacob and Trent
 				System.out.println("\nThe area of a circle with radius " + radius + " is: \n" + areaC);
 			}
 			
-			else if(userinput.equals("r"))	//Area of a rectangle
+			else if(userinput.equalsIgnoreCase("r") || userinput.equalsIgnoreCase("rectangle"))	//Area of a rectangle
 			{
 				System.out.println("\nPlease type length and width as l w.");
 				double length, width;
@@ -29,7 +31,7 @@ public class AreaFinder //Copyright 2014 by Jacob and Trent
 				System.out.println("\nThe area of a rectangle with length:" + length + " and width:" + width + " is: \n" + areaR);
 			}
 			
-			else if(userinput.equals("t"))	//Area of a triangle
+			else if(userinput.equalsIgnoreCase("t") || userinput.equalsIgnoreCase("triangle"))	//Area of a triangle
 			{
 				System.out.println("\nPlease type base and height as b h.");
 				double base, height;
@@ -47,6 +49,12 @@ public class AreaFinder //Copyright 2014 by Jacob and Trent
 			
 			System.out.println("\nWould you like to do another problem?(yes/no)");
 			exit = in.next(); //Program will run as long as the string exit is "yes"
+			
+			}
+			catch(Exception e){	//If the input is not a double(which causes break), this stops the error
+			System.out.println("\nYou dun goofed. Dat aint a number fool.");
+			continue;}
+			
 		}
 		while (exit.contains("yes"));
 	}
