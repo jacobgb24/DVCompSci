@@ -11,14 +11,14 @@ public class TempConv
 			System.out.println("Welcome!\nConvert between Celsius and fahrenheit by typing the temperature and unit(f/c)\n");
 			Scanner in = new Scanner (System.in);
 			double inputTemp = in.nextDouble();
-			String userinput = in.next();
+			String userinput = in.next(); // used next instead of nextLine so that double and string could be together
 			if (userinput.equalsIgnoreCase("f") || userinput.equalsIgnoreCase("fahrenheit"))
-			{
+			{ //Conversion from f to c
 				double c = (inputTemp-32)*5/9;
 				System.out.println(inputTemp + " degrees Fahrenheit is " + c + " degrees Celsius");
 			}
 			else if (userinput.equalsIgnoreCase("c") || userinput.equalsIgnoreCase("celsius"))
-			{
+			{ // conversion from c to f
 				double f = (inputTemp*9)/5+32;
 				System.out.println(inputTemp + " degrees Celsius is " + f + " degrees Fahrenheit");
 			}
