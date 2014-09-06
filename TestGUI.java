@@ -8,30 +8,26 @@ public class TestGUI extends javax.swing.JFrame {
 	@SuppressWarnings("unchecked")
     private void initComponents() {
 
-        radiusInput = new javax.swing.JTextField();
+        radiusInput = new javax.swing.JTextField(); //need another input field for base/width
         run = new javax.swing.JButton();
         shapeSelect = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+		jLabel3 = new javax.swing.JLabel();  //added jLabel3 for base width
         areaLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE); //main window stuff
 		setTitle("Area Test");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        run.setText("Calculate");
+        run.setText("Calculate"); //Calculate Button
         run.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 runActionPerformed(evt);
             }
         });
 
-        shapeSelect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Circle", "Triange", "Rectangle" }));
-
-        jLabel1.setText("Radius");
-
-        jLabel2.setText("Area:");
-
+        shapeSelect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Enter Shape", "Circle", "Triangle", "Rectangle" })); //added "Enter Shape" for start
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -43,7 +39,7 @@ public class TestGUI extends javax.swing.JFrame {
                     .addComponent(shapeSelect, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(6, 6, 6)     //this is gui stuff i dont get probably need another input box here
                         .addComponent(jLabel1)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -71,11 +67,27 @@ public class TestGUI extends javax.swing.JFrame {
         );
 
         pack();
+	if(shapeSelect.equals("Circle"))                // READS COMBOBOX I THINK
+	{
+	    jLabel1.setText("Radius");
+		jLabel2.setText("Area:");                   // seems to work but doesnt actually display labels
+	}
+	else if(shapeSelect.equals("Triangle"))
+	{
+		jLabel1.setText("Base");
+		jLabel3.setText("Height");
+		jLabel2.setText("Area:");
+	}	
+	else if(shapeSelect.equals("Rectangle"))
+	{
+		jLabel1.setText("Length");
+		jLabel3.setText("Width");
+		jLabel2.setText("Area");
+	}
     }
-
-    private void runActionPerformed(java.awt.event.ActionEvent evt) {
+    private void runActionPerformed(java.awt.event.ActionEvent evt) {    //will have to add more for 2 shapes; put inside if statement but without separate class?
      double radius = Double.parseDouble(radiusInput.getText());
-     double area = Math.pow(radius, 2)*Math.PI;
+     double area = Math.pow(radius, 2)*Math.PI; //the actual math
      areaLabel.setText(""+area);
     }
 
@@ -107,6 +119,7 @@ public class TestGUI extends javax.swing.JFrame {
     private javax.swing.JLabel areaLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+	private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField radiusInput;
     private javax.swing.JButton run;
     private javax.swing.JComboBox shapeSelect;
