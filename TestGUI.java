@@ -39,7 +39,7 @@ public class TestGUI extends javax.swing.JFrame {
                     .addComponent(shapeSelect, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)     //this is gui stuff i dont get probably need another input box here
+                        .addGap(6, 6, 6)     //need another input box here jLabel3
                         .addComponent(jLabel1)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -67,18 +67,19 @@ public class TestGUI extends javax.swing.JFrame {
         );
 
         pack();
-	if(shapeSelect.equals("Circle"))                // READS COMBOBOX I THINK
+	String input = shapeSelect.getSelectedItem().toString();	
+	if(input.equals("Circle"))                // READS COMBOBOX I THINK
 	{
 	    jLabel1.setText("Radius");
-		jLabel2.setText("Area:");                   // seems to work but doesnt actually display labels
+		jLabel2.setText("Area:");		// seems to work but doesnt actually display labels probably because they are in the if statements
 	}
-	else if(shapeSelect.equals("Triangle"))
+	else if(input.equals("Triangle"))
 	{
 		jLabel1.setText("Base");
 		jLabel3.setText("Height");
 		jLabel2.setText("Area:");
 	}	
-	else if(shapeSelect.equals("Rectangle"))
+	else if(input.equals("Rectangle"))
 	{
 		jLabel1.setText("Length");
 		jLabel3.setText("Width");
