@@ -3,12 +3,12 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Scanner;
 
-public class Graphing {
+public class Graphing {	//Setup class, prepares the GUI
    
-   static double slopeIn;
-   static double yInt;
+   static double slopeIn; //ALlows variables to be shared between methods
+   static double yIntIn;
    
-    public static void main(String[] args) {
+    public static void main(String[] args) {	//runs argConfig and then GUI methods
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 argConfig();
@@ -17,19 +17,25 @@ public class Graphing {
         });
     }
 
-	public static void argConfig(){
+	public static void argConfig(){	//Scans for slope and intercept
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.print("Input the slope: ");
-		double slopeIn = sc.nextDouble();
+		slopeIn = sc.nextDouble();
+		
 		System.out.print("Input the y-intercept: ");
-		double yInt = sc.nextDouble();
+		yIntIn = sc.nextDouble();
 		}
 	
-	public static double getSlope(){
+	public static double getSlope(){	//Used for retrieving slope in graphic class
 		return slopeIn;
 		}
+	public static double getIntercept(){	//Used for retrieving intercept
+		return yIntIn;
+		}
 	
-    private static void createAndShowGUI() {
+	
+    private static void createAndShowGUI() {	//Creates the window for the graph
         System.out.println("Created GUI on EDT? "+
         SwingUtilities.isEventDispatchThread());
         JFrame f = new JFrame("Swing Paint Demo");
@@ -40,10 +46,11 @@ public class Graphing {
 		}
 }
 
-class GraphPanel extends JPanel {
+class GraphPanel extends JPanel {	//GUI class, creates graph
 
-	Graphing test = new Graphing();
-	double slope = test.getSlope();
+	Graphing test = new Graphing();	//Constructor for previous class
+	int slope = (int)test.getSlope();
+	int yInt = (int)test.getIntercept();
 
    public GraphPanel() {
         setBorder(BorderFactory.createLineBorder(Color.black));
@@ -56,8 +63,8 @@ class GraphPanel extends JPanel {
     }
     
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);       
-		g.drawString("Please work",1,20);
-		g.drawString("Slope is: "+slope, 1, 40);
+		super.paintComponent(g);       
+		g.drawString("Slope is: "+slope+"y-int is: "+yInt, 1, 20);
+		g.drawLine(0,200-yInt, 250, 200-slope*250); //Line graph
     }  
 }
