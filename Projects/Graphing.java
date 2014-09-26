@@ -20,9 +20,9 @@ public class Graphing {
 	public static void argConfig(){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input the slope: ");
-		double slopeIn = sc.nextDouble();
+		slopeIn = sc.nextDouble();
 		System.out.print("Input the y-intercept: ");
-		double yInt = sc.nextDouble();
+		yInt = sc.nextDouble();
 		}
 	
 	public static double getSlope(){
