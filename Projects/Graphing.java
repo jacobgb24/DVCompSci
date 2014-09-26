@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Graphing {
    
+   static double slopeIn;
+   static double yInt;
+   
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -22,6 +25,10 @@ public class Graphing {
 		double yInt = sc.nextDouble();
 		}
 	
+	public static double getSlope(){
+		return slopeIn;
+		}
+	
     private static void createAndShowGUI() {
         System.out.println("Created GUI on EDT? "+
         SwingUtilities.isEventDispatchThread());
@@ -34,6 +41,9 @@ public class Graphing {
 }
 
 class GraphPanel extends JPanel {
+
+	Graphing test = new Graphing();
+	double slope = test.getSlope();
 
    public GraphPanel() {
         setBorder(BorderFactory.createLineBorder(Color.black));
@@ -48,6 +58,6 @@ class GraphPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);       
 		g.drawString("Please work",1,20);
-		g.drawString("Slope is: ", 1, 40);
+		g.drawString("Slope is: "+slope, 1, 40);
     }  
 }
