@@ -52,7 +52,7 @@ class GraphPanel extends JPanel {	//GUI class, creates graph
 	double slope = test.getSlope();
 	int yInt = (int)test.getIntercept();
 	
-	int yIntNew = 500-yInt;
+	int yIntNew = 480-yInt;
 	int slopePoint = (int)slope*500+yInt;
 
    public GraphPanel() {
@@ -79,6 +79,6 @@ class GraphPanel extends JPanel {	//GUI class, creates graph
 				g.drawString(""+(500-i), 0, i-15);}
 		}
 		
-		g.drawLine(0,yIntNew, 500, 500-slopePoint); //Line
+		g.drawLine(20,yIntNew, 500, 480-slopePoint); //Line
     }  
 }
