@@ -3,9 +3,9 @@ public class toBinary {
 	public static void main(String [] args) {
 		long num;//using long to allow bigger numbers
 		long binary=0;
-		int exp = 24;//arbitrary number for how long the binary number can be
+		int exp = 19;//arbitrary number for how long the binary number can be
 		Scanner in = new Scanner(System.in);
-		System.out.println("This program will convert any integer(up to 130k) into binary. Enter a number to begin");
+		System.out.println("This program will convert any integer(up to 130k) into binary. Enter a number to begin");//breaks at 18th digit in binary
 		while(true) { //infinite loop
 			num=in.nextLong(); //taking input int
 			while(num>0) { //Will continue until all of int has been converted to binary
@@ -17,7 +17,7 @@ public class toBinary {
 			}	
 			System.out.println(binary+"\n"); //prints final answer as an int
 			binary=0;//resets values so loop can continue
-			exp=24;
+			exp=19;
 		}
 	}
 }	
