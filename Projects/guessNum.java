@@ -62,7 +62,7 @@ public class guessNum
 				score1++;
 				}	
 			else if (p1diff > p2diff) { //P2 closer
-				System.out.println("P2 is close to the number and has earned 1 point");
+				System.out.println("P2 is closer to the number and has earned 1 point");
 				score2++;
 				}	
 			else if(p1diff == p2diff) { //both equal distance
@@ -72,11 +72,11 @@ public class guessNum
 				}	
 				}
 		if(score1>score2) //Prints who won
-			System.out.println("Congratulations P1 has won the game!");
+			System.out.println("\nCongratulations P1 has won the game!");
 		if(score2>score1)
-			System.out.println("Congratulations P2 has won the game!");
+			System.out.println("\nCongratulations P2 has won the game!");
 		if(score1==score2)
-			System.out.println("YOU PEOPLE BOTH LOSE!!!!");
+			System.out.println("\nYOU PEOPLE BOTH LOSE!!!!");
 	}	
 }
 }		
