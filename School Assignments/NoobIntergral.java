@@ -1,6 +1,6 @@
 // Cleanish version of intergral - JH
 import java.util.*;
-public class CurveArea
+public class NoobIntergral
 {
  public static void main (String[] args)
  {
