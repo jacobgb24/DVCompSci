@@ -11,8 +11,8 @@ public class NoobIntergral
   
   
    x=(xf-xi)/100000000;
-   z += x;
-   xy = z;
+   z += x; 
+   xy = z; //Not sure if this is necessary
    y = 2*xy*xy;
    area = x*y;
    farea += area;
