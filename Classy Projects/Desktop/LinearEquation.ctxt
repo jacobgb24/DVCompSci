@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=slope\ yint
-comment0.target=LinearEquation(double,\ double)
-comment1.params=
-comment1.target=java.lang.String\ toString()
-numComments=2
