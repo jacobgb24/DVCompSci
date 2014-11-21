@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=owner\ account\ initial
+comment0.target=Account(java.lang.String,\ int,\ double)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Account\r\n
+comment1.params=owner\ account
+comment1.target=Account(java.lang.String,\ int)
+comment2.params=amount
+comment2.target=double\ deposit(double)
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment3.params=amount\ fee
+comment3.target=double\ withdraw(double,\ double)
+comment4.params=
+comment4.target=double\ addInterest()
+comment5.params=
+comment5.target=double\ getBalance()
+comment6.params=
+comment6.target=int\ getAcctNumber()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment8.params=acct\ value
+comment8.target=void\ transfer(Account,\ double)
+numComments=9

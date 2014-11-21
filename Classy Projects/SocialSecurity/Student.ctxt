@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=first\ last\ home\ school
+comment0.target=Student(java.lang.String,\ java.lang.String,\ Address,\ Address)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+numComments=2

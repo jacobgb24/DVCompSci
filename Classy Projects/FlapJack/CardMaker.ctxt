@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CardMaker()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ CardMaker\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=int\ getValue()
+comment3.params=
+comment3.target=int\ getBJValue()
+numComments=4

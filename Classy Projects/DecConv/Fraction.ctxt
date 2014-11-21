@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=in
+comment0.target=Fraction(java.lang.String)
+comment1.params=num1\ den1\ num2\ den2
+comment1.target=Fraction(double,\ double,\ double,\ double)
+comment2.params=in
+comment2.target=Fraction\ Convert(java.lang.String)
+comment3.params=decimal
+comment3.target=void\ toFrac(double)
+comment4.params=numer\ denom
+comment4.target=double\ toDec(double,\ double)
+comment5.params=op2
+comment5.target=java.lang.String\ toString(Fraction)
+numComments=6
