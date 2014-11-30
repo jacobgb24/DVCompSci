@@ -60,4 +60,21 @@ public class CardMaker
             faceValue=10;
         return faceValue ;   
     }
+    public static String BJWinner(int score1, int score2)
+    {
+        if(score1>21 && score2>21) 
+            return("You both busted at: "+score1+" and "+score2);
+        else if(score1>21)    
+            return("You have busted at: "+score1+". The computer scored: "+score2);
+        else if(score2>21)
+            return("The computer has busted at: "+score2+". You scored: "+score1);
+        else if(score1>score2)
+            return("All the chips belong to you. You scored: "+score1+" the computer scored: "+score2);
+        else if(score2>score1)
+            return("LOSER. You scored: "+score1+" the computer scored: "+score2);
+        else if(score1==score2)
+            return("You tied at: "+score1);
+        else
+            return("WHAT JUST HAPPENED?");
+    }
 }
