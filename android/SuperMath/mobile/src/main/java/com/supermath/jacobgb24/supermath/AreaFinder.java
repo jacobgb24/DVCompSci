@@ -49,13 +49,41 @@ public class AreaFinder extends ActionBarActivity {
         Anum1.setHint("Length");
         Anum2.setVisibility(View.VISIBLE);
         Anum2.setHint("Width");
-        button();
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    A1 = Double.parseDouble(Anum1.getText().toString());
+                    A2 = Double.parseDouble(Anum2.getText().toString());
+                    area = A1 * A2;
+                    DecimalFormat fmt = new DecimalFormat("########.###");
+                    String fanswer = fmt.format(area);
+                    TextView textView = (TextView) findViewById(R.id.Answeraf);
+                    textView.setText(String.valueOf(fanswer));
+                    area=0;
+                }catch(Exception e) { }
+            }
+        });
     }
     public void TriMath() {
         Anum1.setHint("Base");
         Anum2.setVisibility(View.VISIBLE);
         Anum2.setHint("Height");
-        button();
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    A1 = Double.parseDouble(Anum1.getText().toString());
+                    A2 = Double.parseDouble(Anum2.getText().toString());
+                    area = A1 * A2/2;
+                    DecimalFormat fmt = new DecimalFormat("########.###");
+                    String fanswer = fmt.format(area);
+                    TextView textView = (TextView) findViewById(R.id.Answeraf);
+                    textView.setText(String.valueOf(fanswer));
+                    area=0;
+                }catch(Exception e) { }
+            }
+        });
     }
     public void CircMath() {
         Anum1.setHint("Radius");
@@ -73,23 +101,6 @@ public class AreaFinder extends ActionBarActivity {
                     area = 0;
                 } catch (Exception e) {
                 }
-            }
-        });
-    }
-    public void button() {
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    A1 = Double.parseDouble(Anum1.getText().toString());
-                    A2 = Double.parseDouble(Anum2.getText().toString());
-                    area = A1 * A2;
-                    DecimalFormat fmt = new DecimalFormat("########.###");
-                    String fanswer = fmt.format(area);
-                    TextView textView = (TextView) findViewById(R.id.Answeraf);
-                    textView.setText(String.valueOf(fanswer));
-                    area=0;
-                }catch(Exception e) { }
             }
         });
     }
