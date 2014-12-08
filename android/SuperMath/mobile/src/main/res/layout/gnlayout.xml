@@ -1,112 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
+    android:layout_height="match_parent">
 
-
-    <EditText
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:text="Find the area under a quadratic"
+        android:text="Enter a max number"
+        android:id="@+id/textView2"
         android:textSize="25dp" />
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="109dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:text="Enter the coefficients of a quadratic" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/maxrng"
+        android:hint="Max" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="70dp"
-        android:layout_height="45dp"
-        android:inputType="numberDecimal|numberSigned"
-        android:ems="10"
-        android:id="@+id/Ain"
-        android:textAlignment="center"
-        android:hint="A" />
-    <EditText
-        android:layout_width="70dp"
-        android:layout_height="45dp"
-        android:inputType="numberDecimal|numberSigned"
-        android:ems="10"
-        android:id="@+id/Bin"
-        android:hint="B"
-        android:layout_gravity="center_horizontal" />
-    <EditText
-        android:layout_width="70dp"
-        android:layout_height="45dp"
-        android:inputType="numberDecimal|numberSigned"
-        android:ems="10"
-        android:id="@+id/Cin"
-        android:hint="C"
-        android:layout_gravity="center_horizontal" />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/enterMax" />
 </LinearLayout>
 
+    <TextView
+        android:paddingTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a Guess"
+        android:id="@+id/textView3"
+        android:textSize="25dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="97dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:text="Enter the domain" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/guess"
+        android:hint="Guess" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="70dp"
-            android:layout_height="45dp"
-            android:inputType="numberDecimal|numberSigned"
-            android:ems="10"
-            android:id="@+id/ADin"
-            android:hint="A" />
-
-        <EditText
-            android:layout_width="70dp"
-            android:layout_height="45dp"
-            android:inputType="numberDecimal|numberSigned"
-            android:ems="10"
-            android:id="@+id/BDin"
-            android:hint="B" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_marginLeft="45dp"
-            android:text="Calculate"
-            android:id="@+id/Calculate"
-            />
-
-
-        </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="50dp">
+        android:text="Guess"
+        android:id="@+id/tryguess"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Area="
-            android:id="@+id/textView"
-            android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=""
-            android:id="@+id/Answer"
-            android:layout_gravity="right" />
-
-    </LinearLayout>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25dp"
+        android:id="@+id/guessout"
+        android:textSize="25dp" />
 </LinearLayout>
