@@ -1,7 +1,11 @@
 package com.supermath.jacobgb24.supermath;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +16,7 @@ import java.text.DecimalFormat;
 /**
  * Created by jacob_000 on 12/5/2014.
  */
-public class Integral extends Activity {
+public class Integral extends ActionBarActivity {
     static double Ain, Bin, Cin, ADin, BDin;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -41,13 +45,10 @@ public class Integral extends Activity {
 
     private void Math() {
             final int MAX = 100000;
-            double sectionB = MAX / BDin, sectionA = MAX / ADin, yb, ya, area = 0;
-            for (int i = 0; i < MAX; i++) {
-                yb = (Ain * Math.pow(i / sectionB, 2)) + (Bin * i / sectionB) + Cin;
-                ya = (Ain * Math.pow(i / sectionA, 2)) + (Bin * i / sectionA) + Cin;
-                area += yb / sectionB;
-                area -= ya / sectionA;
-            }
+            double fb, fa, area = 0;
+                fb = (Ain/3 * Math.pow(BDin, 3)) + (Bin/2 * Math.pow(BDin, 2)) + Cin*BDin;
+                fa = (Ain/3 * Math.pow(ADin, 3)) + (Bin/2 * Math.pow(ADin, 2)) + Cin*ADin;
+                area=fb-fa;
             DecimalFormat fmt = new DecimalFormat("###,###,###,###,###.###");
             String finArea = fmt.format(area);
             TextView answer = (TextView) findViewById(R.id.Answer);

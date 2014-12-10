@@ -16,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Button IButton = (Button) findViewById(R.id.IButton);
         IButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,13 @@ public class MainActivity extends ActionBarActivity {
                 startGuessNum();
             }
         });
+        Button KButton = (Button) findViewById(R.id.KButton);
+        KButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startKinematic();
+            }
+        });
     }
     private void startIntegral() {
         Intent launchIntegral = new Intent(this, Integral.class);
@@ -51,6 +59,10 @@ public class MainActivity extends ActionBarActivity {
     private void startGuessNum() {
         Intent launchGN = new Intent(this, GuessNum.class);
         startActivity(launchGN);
+    }
+    private void startKinematic() {
+        Intent launchK = new Intent(this, Kinematics.class);
+        startActivity(launchK);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

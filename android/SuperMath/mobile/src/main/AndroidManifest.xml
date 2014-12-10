@@ -17,9 +17,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Integral" ></activity>
-        <activity android:name=".AreaFinder"></activity>
+            android:name=".Integral"
+            android:parentActivityName="com.supermath.jacobgb24.supermath.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.supermath.jacobgb24.supermath.MainActivity" />
+            </activity>
 
+        <activity android:name=".AreaFinder"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.supermath.jacobgb24.supermath.MainActivity" />
+            </activity>
+        <activity android:name=".Kinematics"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.supermath.jacobgb24.supermath.MainActivity" />
+        </activity>
+        <activity android:name=".GuessNum"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.supermath.jacobgb24.supermath.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

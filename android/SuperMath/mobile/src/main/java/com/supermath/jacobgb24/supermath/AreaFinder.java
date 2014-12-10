@@ -56,11 +56,7 @@ public class AreaFinder extends ActionBarActivity {
                     A1 = Double.parseDouble(Anum1.getText().toString());
                     A2 = Double.parseDouble(Anum2.getText().toString());
                     area = A1 * A2;
-                    DecimalFormat fmt = new DecimalFormat("########.###");
-                    String fanswer = fmt.format(area);
-                    TextView textView = (TextView) findViewById(R.id.Answeraf);
-                    textView.setText(String.valueOf(fanswer));
-                    area=0;
+                    print();
                 }catch(Exception e) { }
             }
         });
@@ -76,11 +72,7 @@ public class AreaFinder extends ActionBarActivity {
                     A1 = Double.parseDouble(Anum1.getText().toString());
                     A2 = Double.parseDouble(Anum2.getText().toString());
                     area = A1 * A2/2;
-                    DecimalFormat fmt = new DecimalFormat("########.###");
-                    String fanswer = fmt.format(area);
-                    TextView textView = (TextView) findViewById(R.id.Answeraf);
-                    textView.setText(String.valueOf(fanswer));
-                    area=0;
+                    print();
                 }catch(Exception e) { }
             }
         });
@@ -94,14 +86,17 @@ public class AreaFinder extends ActionBarActivity {
                 try {
                     A1 = Double.parseDouble(Anum1.getText().toString());
                     area = Math.pow(A1, 2) * Math.PI;
-                    DecimalFormat fmt = new DecimalFormat("########.###");
-                    String fanswer = fmt.format(area);
-                    TextView textView = (TextView) findViewById(R.id.Answeraf);
-                    textView.setText(String.valueOf(fanswer));
-                    area = 0;
+                    print();
                 } catch (Exception e) {
                 }
             }
         });
+    }
+    public void print(){
+        DecimalFormat fmt = new DecimalFormat("########.###");
+        String fanswer = fmt.format(area);
+        TextView textView = (TextView) findViewById(R.id.Answeraf);
+        textView.setText(String.valueOf(fanswer));
+        area = 0;
     }
 }

@@ -14,8 +14,8 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:text="New Button"
-        android:id="@+id/button4"
+        android:text="Kinematics"
+        android:id="@+id/KButton"
         android:layout_below="@+id/IButton"
         android:layout_alignParentStart="true" />
 
@@ -38,9 +38,18 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:text="Intergral"
+        android:text="Integral"
         android:id="@+id/IButton"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/GButton"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:text="Jacob Davis 2014 AP CompSci"
+        android:id="@+id/textView9"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>
