@@ -27,7 +27,7 @@ public class Integral extends ActionBarActivity {
         final EditText Cquad = (EditText) findViewById(R.id.Cin);
         final EditText Adom = (EditText) findViewById(R.id.ADin);
         final EditText Bdom = (EditText) findViewById(R.id.BDin);
-
+        //handles button click, gets vars then calls math
         Button calculate = (Button) findViewById(R.id.Calculate);
         calculate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -42,9 +42,8 @@ public class Integral extends ActionBarActivity {
             }
         });
     }
-
+    //finds integral using fund thm
     private void Math() {
-            final int MAX = 100000;
             double fb, fa, area = 0;
                 fb = (Ain/3 * Math.pow(BDin, 3)) + (Bin/2 * Math.pow(BDin, 2)) + Cin*BDin;
                 fa = (Ain/3 * Math.pow(ADin, 3)) + (Bin/2 * Math.pow(ADin, 2)) + Cin*ADin;

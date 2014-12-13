@@ -42,6 +42,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="Clear All"
+        android:onClick="onClick"
         android:id="@+id/Clear" />
 
     <TextView
@@ -89,7 +90,7 @@
     <EditText
         android:layout_width="100dp"
         android:layout_height="45dp"
-        android:inputType="numberDecimal|numberSigned"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/time"
         android:hint="t(s)"
@@ -99,6 +100,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Find"
+            android:onClick="onClick"
             android:id="@+id/KCalc" />
         <TextView
             android:layout_width="126dp"

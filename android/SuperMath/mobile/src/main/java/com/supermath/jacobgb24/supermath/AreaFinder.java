@@ -31,7 +31,7 @@ public class AreaFinder extends ActionBarActivity {
         calculate = (Button) findViewById(R.id.Calculateaf);
         Anum1 = (EditText) findViewById(R.id.Anum1);
         Anum2 = (EditText) findViewById(R.id.Anum2);
-
+        //checks which shape is selected
         shape.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -44,7 +44,7 @@ public class AreaFinder extends ActionBarActivity {
             }
         });
     }
-
+    //math for each shape
     public void RectMath() {
         Anum1.setHint("Length");
         Anum2.setVisibility(View.VISIBLE);
@@ -92,6 +92,7 @@ public class AreaFinder extends ActionBarActivity {
             }
         });
     }
+    //sets textview based off of answer
     public void print(){
         DecimalFormat fmt = new DecimalFormat("########.###");
         String fanswer = fmt.format(area);

@@ -1,6 +1,7 @@
 package com.supermath.jacobgb24.supermath;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,8 +16,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        //declares buttons for different modules
         Button IButton = (Button) findViewById(R.id.IButton);
         IButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     }
+    //starts activities based off of choice
     private void startIntegral() {
         Intent launchIntegral = new Intent(this, Integral.class);
         startActivity(launchIntegral);
@@ -70,19 +72,14 @@ public class MainActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+    //settings menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (item.getItemId() == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
         }
-
         return super.onOptionsItemSelected(item);
+        }
     }
-}
+
