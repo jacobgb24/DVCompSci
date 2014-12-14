@@ -18,6 +18,7 @@
         </activity>
         <activity
             android:name=".Integral"
+            android:label="Integral"
             android:parentActivityName="com.supermath.jacobgb24.supermath.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -25,24 +26,28 @@
             </activity>
 
         <activity android:name=".AreaFinder"
+            android:label="Area Finder"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.supermath.jacobgb24.supermath.MainActivity" />
             </activity>
         <activity android:name=".Kinematics"
+            android:label="Kinematics"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.supermath.jacobgb24.supermath.MainActivity" />
         </activity>
-        <activity android:name=".GuessNum"
+        <activity android:name=".Roots"
+            android:label="Quadratic Solver"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.supermath.jacobgb24.supermath.MainActivity" />
         </activity>
         <activity android:name=".SettingsActivity"
+            android:label="Settings"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

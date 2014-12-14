@@ -17,7 +17,8 @@
         android:text="Kinematics"
         android:id="@+id/KButton"
         android:layout_below="@+id/IButton"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/IButton" />
 
     <Button
         android:layout_width="120dp"
@@ -25,15 +26,17 @@
         android:text="Area Finder"
         android:id="@+id/AFButton"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:text="GuessNum"
-        android:id="@+id/GButton"
+        android:text="Quadratic Solver"
+        android:id="@+id/RButton"
         android:layout_below="@+id/AFButton"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="120dp"
@@ -41,8 +44,9 @@
         android:text="Integral"
         android:id="@+id/IButton"
         android:layout_gravity="center_vertical"
-        android:layout_below="@+id/GButton"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/RButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"

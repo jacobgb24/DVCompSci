@@ -32,11 +32,11 @@ public class MainActivity extends ActionBarActivity {
                 startAreaFinder();
             }
         });
-        Button GButton = (Button) findViewById(R.id.GButton);
-        GButton.setOnClickListener(new View.OnClickListener() {
+        Button RButton = (Button) findViewById(R.id.RButton);
+        RButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startGuessNum();
+                startRoots();
             }
         });
         Button KButton = (Button) findViewById(R.id.KButton);
@@ -58,9 +58,9 @@ public class MainActivity extends ActionBarActivity {
         startActivity(launchAF);
     }
 
-    private void startGuessNum() {
-        Intent launchGN = new Intent(this, GuessNum.class);
-        startActivity(launchGN);
+    private void startRoots() {
+        Intent launchR = new Intent(this, Roots.class);
+        startActivity(launchR);
     }
     private void startKinematic() {
         Intent launchK = new Intent(this, Kinematics.class);

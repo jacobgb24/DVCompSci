@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the coefficients of a quadratic to find its roots"
+        android:id="@+id/textView2"
+        android:textSize="30dp" />
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:hint="A"
+        android:id="@+id/Aco" />
+
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="10"
+        android:hint="B"
+        android:id="@+id/Bco"
+        android:layout_gravity="right" />
+
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:hint="C"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="10"
+        android:id="@+id/Cco" />
+</LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/rootgo"
+        android:layout_gravity="right" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Root 1="
+        android:id="@+id/textView3"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/R1ans"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Root 2="
+        android:id="@+id/textView12"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/R2ans"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp" />
+</LinearLayout>
+</LinearLayout>
