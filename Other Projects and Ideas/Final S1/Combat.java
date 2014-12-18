@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package pack;
+import java.util.Random;
 
-/**
- *
- * @author Trent
- */
+//Class for the player
 public class Combat {
     static int maxHealth, defense, damage, health, mana;
     
@@ -45,4 +37,13 @@ public class Combat {
     public void useMana(int cost){
         mana -= cost;
     }
+    public void setMaxHealth(int amount){
+        maxHealth += amount;
+    }
+    public void setDefense(int amount){
+        defense += amount;
+    }
+    public void setDamage(int amount){
+        damage += amount;
+    }    
 }
