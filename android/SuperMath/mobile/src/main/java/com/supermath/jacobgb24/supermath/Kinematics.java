@@ -2,14 +2,9 @@ package com.supermath.jacobgb24.supermath;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import java.text.DecimalFormat;
@@ -48,7 +43,7 @@ public class Kinematics extends ActionBarActivity {
         }
     }
     //deals with clicking either button by case
-    public void onClick(View v) {
+    public void onClickK(View v) {
         try {
             switch (v.getId()) {
                 case R.id.KCalc:
@@ -62,21 +57,17 @@ public class Kinematics extends ActionBarActivity {
                         posCalc();
                     break;
                 case R.id.Clear:
-                    if (tval.getText().toString().trim().length() > 0)
-                        tval.setText("");
-                    if (aval.getText().toString().trim().length() > 0)
-                        aval.setText("");
-                    if (xval.getText().toString().trim().length() > 0)
-                        xval.setText("");
-                    if (vval.getText().toString().trim().length() > 0)
-                        vval.setText("");
+                    tval.setText("");
+                    aval.setText("");
+                    xval.setText("");
+                    vval.setText("");
                     break;
 
             }
-        } catch (Exception e) {
-        }
+        } catch (Exception e) {}
     }
     //math for finding missing var
+
     private void timeCalc() {
         x = Double.parseDouble(xval.getText().toString());
         v = Double.parseDouble(vval.getText().toString());

@@ -42,7 +42,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="Clear All"
-        android:onClick="onClick"
+        android:onClick="onClickK"
         android:id="@+id/Clear" />
 
     <TextView
@@ -100,12 +100,13 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:text="Find"
-            android:onClick="onClick"
+            android:onClick="onClickK"
             android:id="@+id/KCalc" />
         <TextView
             android:layout_width="126dp"
             android:layout_height="87dp"
             android:text="Input three numbers and press find to calculate the missing variable"
-            android:id="@+id/textView11" />
+            android:id="@+id/textView11"
+            android:textColor="@color/abc_primary_text_material_light" />
     </LinearLayout>
 </LinearLayout>

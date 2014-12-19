@@ -65,7 +65,8 @@
         android:id="@+id/editText6"
         android:layout_gravity="right"
         android:text="Area="
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <TextView
         android:layout_width="298dp"

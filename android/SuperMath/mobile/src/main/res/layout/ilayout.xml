@@ -12,7 +12,8 @@
         android:id="@+id/editText3"
         android:text="Find the area under a quadratic"
         android:textSize="25dp"
-        android:theme="@style/AppTheme" />
+        android:theme="@style/AppTheme"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <TextView
         android:layout_width="match_parent"
@@ -21,7 +22,8 @@
         android:id="@+id/editText"
         android:text="Enter the coefficients of a quadratic"
         android:textSize="18dp"
-        android:theme="@style/AppTheme" />
+        android:theme="@style/AppTheme"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -60,7 +62,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:text="Enter the domain"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -87,6 +90,7 @@
             android:layout_marginLeft="45dp"
             android:text="Calculate"
             android:id="@+id/Calculate"
+            android:onClick="onClickI"
             />
 
 
@@ -104,7 +108,8 @@
             android:layout_height="wrap_content"
             android:text="Area="
             android:id="@+id/textView"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="@color/abc_primary_text_material_light" />
 
         <TextView
             android:layout_width="wrap_content"

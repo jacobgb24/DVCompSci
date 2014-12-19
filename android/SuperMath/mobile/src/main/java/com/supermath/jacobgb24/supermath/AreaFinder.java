@@ -1,12 +1,10 @@
 package com.supermath.jacobgb24.supermath;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -24,23 +22,23 @@ public class AreaFinder extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aflayout);
-        Math();
-    }
-    public void Math() {
         shape = (RadioGroup) findViewById(R.id.AFchoice);
         calculate = (Button) findViewById(R.id.Calculateaf);
         Anum1 = (EditText) findViewById(R.id.Anum1);
         Anum2 = (EditText) findViewById(R.id.Anum2);
+        Math();
+    }
+    public void Math(){
         //checks which shape is selected
         shape.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == R.id.rectB)
-                    RectMath();
-                else if (checkedId == R.id.triB)
-                    TriMath();
-                else
-                    CircMath();
+                    if (checkedId == R.id.rectB)
+                        RectMath();
+                    else if (checkedId == R.id.triB)
+                        TriMath();
+                    else
+                        CircMath();
             }
         });
     }

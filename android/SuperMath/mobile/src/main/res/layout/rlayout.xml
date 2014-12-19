@@ -8,7 +8,8 @@
         android:layout_height="wrap_content"
         android:text="Enter the coefficients of a quadratic to find its roots"
         android:id="@+id/textView2"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_light" />
 
     <LinearLayout
     android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal|numberSigned"
         android:ems="10"
-        android:hint="A"
+        android:hint="Ax^2"
         android:id="@+id/Aco" />
 
     <EditText
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberSigned|numberDecimal"
         android:ems="10"
-        android:hint="B"
+        android:hint="Bx"
         android:id="@+id/Bco"
         android:layout_gravity="right" />
 
@@ -44,6 +45,7 @@
         android:layout_height="wrap_content"
         android:text="Go"
         android:id="@+id/rootgo"
+        android:onClick="onClickR"
         android:layout_gravity="right" />
     <LinearLayout
         android:layout_width="wrap_content"
@@ -53,7 +55,8 @@
         android:layout_height="wrap_content"
         android:text="Root 1="
         android:id="@+id/textView3"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,12 +68,14 @@
 </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <TextView
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Root 2="
-        android:id="@+id/textView12"
+        android:background="@null"
+        android:id="@+id/supsec"
         android:textSize="25dp" />
 
     <TextView

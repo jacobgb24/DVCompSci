@@ -12,4 +12,11 @@
         android:defaultValue="true" >
 
     </CheckBoxPreference>
+    <CheckBoxPreference
+        android:key="PREF_SEC"
+        android:title="Super Duper Secret"
+        android:summary="What does it do? The world may never know(unless they view the source code)."
+        android:defaultValue="false" >
+
+    </CheckBoxPreference>
 </PreferenceScreen>

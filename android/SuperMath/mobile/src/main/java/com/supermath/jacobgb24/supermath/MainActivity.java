@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,55 +16,29 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
-        //declares buttons for different modules
-        Button IButton = (Button) findViewById(R.id.IButton);
-        IButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startIntegral();
-            }
-        });
-        Button AFButton = (Button) findViewById(R.id.AFButton);
-        AFButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startAreaFinder();
-            }
-        });
-        Button RButton = (Button) findViewById(R.id.RButton);
-        RButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startRoots();
-            }
-        });
-        Button KButton = (Button) findViewById(R.id.KButton);
-        KButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startKinematic();
-            }
-        });
     }
-    //starts activities based off of choice
-    private void startIntegral() {
-        Intent launchIntegral = new Intent(this, Integral.class);
-        startActivity(launchIntegral);
+    //handles button clicks
+    public void onClickM(View v){
+        switch (v.getId()) {
+            case R.id.IButton:
+                Intent launchIntegral = new Intent(this, Integral.class);
+                startActivity(launchIntegral);
+                break;
+            case R.id.AFButton:
+                Intent launchAF = new Intent(this, AreaFinder.class);
+                startActivity(launchAF);
+                break;
+            case R.id.RButton:
+                Intent launchR = new Intent(this, Roots.class);
+                startActivity(launchR);
+                break;
+            case R.id.KButton:
+                Intent launchK = new Intent(this, Kinematics.class);
+                startActivity(launchK);
+                break;
+        }
     }
-
-    private void startAreaFinder() {
-        Intent launchAF = new Intent(this, AreaFinder.class);
-        startActivity(launchAF);
-    }
-
-    private void startRoots() {
-        Intent launchR = new Intent(this, Roots.class);
-        startActivity(launchR);
-    }
-    private void startKinematic() {
-        Intent launchK = new Intent(this, Kinematics.class);
-        startActivity(launchK);
-    }
+    //other stuff
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
