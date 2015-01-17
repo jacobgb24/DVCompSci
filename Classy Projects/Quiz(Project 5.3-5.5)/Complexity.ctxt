@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=complexity
+comment0.target=void\ setComplexity(int)
+comment1.params=
+comment1.target=int\ getComplexity()
+numComments=2

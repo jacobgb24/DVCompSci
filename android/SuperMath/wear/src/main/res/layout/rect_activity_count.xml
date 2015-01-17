@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context=".MainActivity" tools:deviceIds="wear_square"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:longClickable="true"
+        android:id="@+id/inc"
+        android:layout_weight="0.96"
+        android:textSize="64dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:longClickable="true"
+        android:text="-"
+        android:id="@+id/dec"
+        android:textSize="21dp"
+        android:textAlignment="center" />
+</LinearLayout>

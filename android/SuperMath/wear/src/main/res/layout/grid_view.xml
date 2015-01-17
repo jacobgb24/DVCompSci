@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.supermath.jacobgb24.supermath.WearableListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/times_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#3BB9FF"
+    android:dividerHeight="0dp" />

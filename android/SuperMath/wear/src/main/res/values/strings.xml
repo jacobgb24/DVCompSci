@@ -4,5 +4,6 @@
     <string name="app_name">SuperMath</string>
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
+    <string name="saved_count"></string>
 
 </resources>
