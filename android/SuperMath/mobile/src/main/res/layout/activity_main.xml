@@ -52,6 +52,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Temp Converter"
+        android:id="@+id/TCButton"
+        android:onClick="onClickM"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/KButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

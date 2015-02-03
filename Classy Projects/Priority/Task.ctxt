@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=seat
+comment0.target=Task(java.lang.String)
+comment1.params=level
+comment1.target=void\ setPriority(int)
+comment2.params=
+comment2.target=int\ getPriority()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

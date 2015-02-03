@@ -32,6 +32,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.supermath.jacobgb24.supermath.MainActivity" />
             </activity>
+        <activity android:name=".TempConv"
+            android:label="Temp Converter"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.supermath.jacobgb24.supermath.MainActivity" />
+        </activity>
         <activity android:name=".Kinematics"
             android:label="Kinematics"
             android:parentActivityName=".MainActivity">

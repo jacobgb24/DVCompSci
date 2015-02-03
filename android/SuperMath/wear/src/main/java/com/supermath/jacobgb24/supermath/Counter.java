@@ -41,9 +41,9 @@ public class Counter extends Activity {
     private void Count() {
         mplus.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public boolean onLongClick(View v) { //adds 10 on long click        **Running on Android Wear**
                 time1=System.currentTimeMillis();
-                if(Math.abs(time2-time1)<=75)
+                if(Math.abs(time2-time1)<=75) //resets count to 0 if + and - long clicked at same time
                     count = 0;
                 else
                     count += 10;
@@ -55,7 +55,7 @@ public class Counter extends Activity {
         });
         mplus.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //adds 1
                 count++;
                 mplus.setText(String.valueOf(count));
                 editor.putInt("saved_count", count);
@@ -64,7 +64,7 @@ public class Counter extends Activity {
         });
         mminus.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public boolean onLongClick(View v) { //subtracts 10 on long click
                 time2=System.currentTimeMillis();
                 if(Math.abs(time2-time1)<=75)
                     count = 0;
@@ -80,7 +80,7 @@ public class Counter extends Activity {
         });
         mminus.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //suibtracts 1
                 if(count>0)
                     count--;
                 mplus.setText(String.valueOf(count));

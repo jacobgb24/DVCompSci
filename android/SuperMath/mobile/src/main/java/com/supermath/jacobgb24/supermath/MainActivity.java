@@ -36,6 +36,10 @@ public class MainActivity extends ActionBarActivity {
                 Intent launchK = new Intent(this, Kinematics.class);
                 startActivity(launchK);
                 break;
+            case R.id.TCButton:
+                Intent launchTC = new Intent(this, TempConv.class);
+                startActivity(launchTC);
+                break;
         }
     }
     //other stuff
