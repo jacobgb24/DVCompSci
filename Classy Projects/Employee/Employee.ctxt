@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=wage\ hours
+comment0.target=Employee(int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=inc
+comment2.target=void\ raise(int)
+numComments=3

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=income\ hours
+comment0.target=Surgeon(int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ cut()
+comment2.params=
+comment2.target=java.lang.String\ suture()
+numComments=3

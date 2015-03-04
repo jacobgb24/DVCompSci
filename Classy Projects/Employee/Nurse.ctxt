@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=income\ hours
+comment0.target=Nurse(int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ checkUp()
+numComments=2
