@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=eName\ eAddress\ ePhone
+comment0.target=StaffMember(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=double\ pay()
+numComments=3

@@ -44,14 +44,14 @@ public class Integral extends ActionBarActivity {
     }
     //finds integral using fund thm
     private void Math() {
-            double fb, fa, area = 0;
-                fb = (Ain/3 * Math.pow(BDin, 3)) + (Bin/2 * Math.pow(BDin, 2)) + Cin*BDin;
-                fa = (Ain/3 * Math.pow(ADin, 3)) + (Bin/2 * Math.pow(ADin, 2)) + Cin*ADin;
-                area=fb-fa;
-            DecimalFormat fmt = new DecimalFormat("###,###,###,###,###.###");
-            String finArea = fmt.format(area);
-            TextView answer = (TextView) findViewById(R.id.Answer);
-            answer.setText(String.valueOf(finArea));
-            area = 0;
-    }
-}
+        double fb, fa, area = 0;
+        fb = (Ain/3 * Math.pow(BDin, 3)) + (Bin/2 * Math.pow(BDin, 2)) + Cin*BDin;
+        fa = (Ain/3 * Math.pow(ADin, 3)) + (Bin/2 * Math.pow(ADin, 2)) + Cin*ADin;
+        area=fb-fa;
+        DecimalFormat fmt = new DecimalFormat("###,###,###,###,###.###");
+        String finArea = fmt.format(area);
+        TextView answer = (TextView) findViewById(R.id.Answer);
+        answer.setText(String.valueOf(finArea));
+        area = 0;
+        }
+        }
