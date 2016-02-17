@@ -2,8 +2,6 @@ DVCompSci
 =========
 Welcome!
 
-This is a Repository for people at Deer Valley taking AP Comp Sci to collaborate and test ideas.
+THIS IS NOT A PLACE TO BLATANTLY COPY CODE TO PASS A CLASS. TRY LEARNING SOMETHING INSTEAD
 
-Download the github program to easily add work here: https://windows.github.com/
-Make a pull request or send me your username so I can add you to the main list of contributors.
-After you are made a contributor you don't need to use a fork since you can already make changes.
+This repository should be used when you are stuck on a problem and can not find a solution. It can also be used to compare solutions after you have completed a project. You should never copy code directly. Doing this teaches you nothing and will not prepare you for any tests, especially the AP exam. I want to leave this repositroy up as a useful resource, but if it continues to be abused I will remove it.
