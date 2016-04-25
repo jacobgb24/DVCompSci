@@ -2,16 +2,30 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
 public class SensorParse {
-
-	public static void main(String[] args) throws FileNotFoundException {
-		File data = new File("LOG00925.txt");
-		Scanner scan = new Scanner(data);
+	static boolean search=true;
+	static Scanner scan;
+	static File data;
+	public static void main(String[] args){
+		int lognum=9999;
+		while(search=true){	
+			try{
+				String logy = Integer.toString(lognum+10000).substring(1);
+				data = new File("C:/Users/Trent/Desktop/CompSci","LOG0"+logy+".txt");
+				scan = new Scanner(data);
+				break;}
+			catch(FileNotFoundException e){
+				lognum--;}
+			if(lognum<0){
+				System.out.println("No logs found");
+				System.exit(1);}
+		}
+		
+		System.out.println("File Found!");	
 		String string = scan.nextLine();
+		System.out.println(string);
 		if(string.contains("<gps>")){
 			
 		}
 	}
-
 }
