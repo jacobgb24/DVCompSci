@@ -13,7 +13,13 @@ public class SensorParse {
 				String logy = Integer.toString(lognum+10000).substring(1);
 				data = new File("C:/Users/Trent/Desktop/CompSci","LOG0"+logy+".txt");
 				scan = new Scanner(data);
-				break;}
+				if(data.length()>0){
+					break;}
+				else{
+					System.out.println("Log number "+lognum+" is empty");
+					lognum--;
+				}
+			}
 			catch(FileNotFoundException e){
 				lognum--;}
 			if(lognum<0){
